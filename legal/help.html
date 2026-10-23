@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centro de Ayuda y Guía de Uso - Zeus Video Caster</title>
+  <style>
+    :root {
+      --bg-page: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-subtle: #f8fafc;
+      --bg-callout: #eff6ff;
+      --border-callout: #3b82f6;
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --border-color: #e2e8f0;
+      --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-page: #0b0f19;
+        --bg-card: #111827;
+        --bg-subtle: #1e293b;
+        --bg-callout: rgba(59, 130, 246, 0.12);
+        --border-callout: #60a5fa;
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
+        --accent: #60a5fa;
+        --accent-hover: #93c5fd;
+        --border-color: #1f2937;
+        --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background-color: var(--bg-card);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+    }
+
+    header {
+      padding: 2.5rem 2.5rem 2rem;
+      border-bottom: 1px solid var(--border-color);
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), transparent);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      background-color: var(--bg-callout);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      color: var(--text-primary);
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+
+    main {
+      padding: 2.25rem 2.5rem;
+    }
+
+    section {
+      margin-bottom: 2.25rem;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    h2 .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background-color: var(--bg-callout);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin: 0.75rem 0 1rem 1.4rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    li strong {
+      color: var(--text-primary);
+    }
+
+    .callout {
+      background-color: var(--bg-callout);
+      border-left: 4px solid var(--border-callout);
+      padding: 1rem 1.25rem;
+      border-radius: 0 10px 10px 0;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+
+    .callout strong {
+      color: var(--text-primary);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    .support-grid {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .support-card {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem 2rem;
+      text-align: center;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem 2.5rem;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      background-color: var(--bg-subtle);
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0.75rem;
+      }
+      header, main, footer {
+        padding: 1.5rem 1.25rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.12rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <span class="badge">Zeus Video Caster</span>
+      <h1>Centro de Ayuda y Guía de Uso</h1>
+      <p class="last-updated">Última actualización: <strong>22 de October de 2026</strong></p>
+    </header>
+
+    <main>
+      <section>
+        <h2><span class="sec-num">1</span> Cómo enviar un video a tu TV en 3 pasos</h2>
+        <ol>
+          <li><strong>Busca tu página web:</strong> Usa la barra inferior de búsqueda para entrar al sitio web donde se encuentra el video que deseas ver.</li>
+          <li><strong>Reproduce el video dentro de la página:</strong> Toca el botón de reproducción (&gt;) del reproductor de la página web. Al empezar a cargar el video, <strong>Zeus Video Caster</strong> detectará el enlace automáticamente.</li>
+          <li><strong>Toca el botón de videos detectados:</strong> En la esquina inferior derecha aparecerá un botón flotante con el número de videos encontrados. Tócalo, selecciona el video y elige tu TV para transmitir.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2><span class="sec-num">2</span> Aparecen varias opciones en "Videos Encontrados", ¿cuál debo elegir?</h2>
+        <p>Muchas páginas web dividen un mismo video en distintas calidades o resoluciones para adaptarse a la velocidad de internet. Por eso verás varias opciones en la lista:</p>
+        <ul>
+          <li><strong>adaptive (Recomendado para empezar):</strong> Ajusta la calidad automáticamente según tu conexión y suele ser la opción más compatible.</li>
+          <li><strong>Resoluciones con números (ej. 1920&times;1080, 1280&times;720, 888&times;480):</strong> Indican el tamaño de la imagen. Un número mayor significa mayor nitidez (HD/Full HD), mientras que un número menor carga más rápido.</li>
+        </ul>
+        <div class="callout">
+          <strong>¿Qué hago si mi TV no reproduce una opción o no tiene sonido?</strong> Algunas televisiones no soportan ciertos formatos o tamaños específicos. Simplemente vuelve a abrir la lista de videos detectados y selecciona otra opción o resolución diferente (por ejemplo, prueba con 1280&times;720 o adaptive).
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="sec-num">3</span> Cómo transmitir archivos locales desde tu galería</h2>
+        <p>
+          También puedes transmitir archivos multimedia guardados directamente en tu teléfono sin necesidad de explorar carpetas locales dentro de la aplicación. Simplemente abre tu galería de fotos o administrador de archivos, selecciona un video o archivo de audio, toca el botón de <strong>"Compartir"</strong> o <strong>"Abrir con"</strong> del sistema y elige <strong>Zeus Video Caster</strong>. La aplicación transmitirá el archivo inmediatamente a tu televisor a través de tu red Wi-Fi local.
+        </p>
+      </section>
+
+      <section>
+        <h2><span class="sec-num">4</span> ¿Por qué algunos sitios (como YouTube o videos protegidos con DRM) no funcionan?</h2>
+        <p>
+          Algunas plataformas de streaming aplican estrictas medidas de gestión de derechos digitales (DRM) o términos de servicio que prohíben la extracción y transmisión externa de flujos. Debido a que <strong>Zeus Video Caster</strong> respeta estos protocolos de seguridad, los flujos de video de plataformas con cifrado propietario o políticas restringidas (como el reproductor oficial de YouTube) no pueden ser interceptados ni transmitidos a través de nuestro detector de medios.
+        </p>
+      </section>
+
+      <section>
+        <h2><span class="sec-num">5</span> Solución a Problemas Comunes</h2>
+        <ul>
+          <li>
+            <strong>Mi televisión no aparece en la lista de dispositivos:</strong>
+            <ul>
+              <li>Asegúrate de que tu teléfono y tu Smart TV o Chromecast estén conectados exactamente a la misma red Wi-Fi (evita redes de invitados o datos móviles).</li>
+              <li>Si usas un dispositivo Roku, verifica en tu TV en <em>Configuración &gt; Sistema &gt; Configuración avanzada del sistema &gt; Control mediante apps móviles</em> y asegúrate de que esté configurado en <strong>Permisivo</strong> o <strong>Activado</strong>.</li>
+              <li>Si tu TV sigue sin aparecer, apaga y enciende el Wi-Fi de tu teléfono o reinicia tu televisor.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>El video se detiene o se corta cuando apago la pantalla del teléfono:</strong>
+            <ul>
+              <li>Algunos videos requieren que tu teléfono mantenga la transmisión activa en tiempo real. Si el ahorro de batería de Android suspende la aplicación cuando la pantalla se apaga, la reproducción puede pausarse.</li>
+              <li>Para solucionarlo: abre <strong>Ajustes</strong> dentro de Zeus Video Caster, busca <strong>Optimización de batería</strong> y selecciona <strong>"Sin restricciones"</strong> o <strong>"No optimizar"</strong> para esta aplicación.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>La página web abre muchas ventanas emergentes de publicidad:</strong>
+            <ul>
+              <li>Verifica en el menú de <strong>Ajustes</strong> de la aplicación que la opción de <strong>Bloquear anuncios</strong> esté activada para evitar ventanas emergentes intrusivas dentro del navegador.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="sec-num">6</span> Contacto y Soporte Técnico</h2>
+        <p>Si necesitas ayuda adicional o tienes alguna consulta sobre el funcionamiento de Zeus Video Caster, comunícate con nosotros a través de nuestro canal de soporte:</p>
+        <div class="support-grid">
+          <div class="support-card">
+            <p style="margin-bottom: 0.25rem;"><strong>Comunidad de Telegram</strong></p>
+            <p style="margin-bottom: 0;"><a href="https://t.me/zeusvc" target="_blank" rel="noopener noreferrer">Unirse al Grupo</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; Digital Codec Labs. Todos los derechos reservados.
+    </footer>
+  </div>
+
+</body>
+</html>
