@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeus Cast App - Descarga en Google Play</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px 30px;
+            max-width: 480px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        p {
+            color: #94a3b8;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .btn-playstore {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 14px 28px;
+            border-radius: 12px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+            width: 100%;
+        }
+        .btn-playstore:hover {
+            background-color: #7dd3fc;
+            transform: translateY(-2px);
+        }
+        .btn-playstore svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        footer a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="card">
+        <span class="badge">DISPONIBLE EN ANDROID</span>
+        <h1>Zeus Cast App</h1>
+        <p>Envía y disfruta tu contenido multimedia favorito directamente en tu pantalla de forma rápida y sencilla.</p>
+        
+        <a href="https://play.google.com/store/apps/details?id=com.dclteam.zeuscastapp" target="_blank" rel="noopener noreferrer" class="btn-playstore">
+            <!-- Ícono de Google Play -->
+            <svg viewBox="0 0 24 24">
+                <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+            </svg>
+            Descargar en Google Play
+        </a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DCL Team. Todos los derechos reservados.</p>
+        <!-- Si tienes política de privacidad o correo de soporte, puedes descomentar la siguiente línea: -->
+        <!-- <p style="margin-top: 8px;"><a href="mailto:soporte@tudominio.com">Contacto y Soporte</a></p> -->
+    </footer>
+
+</body>
+</html>
